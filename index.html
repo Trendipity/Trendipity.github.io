@@ -58,34 +58,66 @@
       @keyframes title {
         from {
           opacity: 0;
-          color: pink;
+          color: #ffb6c1;
         }
         to {
           opacity: 1;
         }
       }
+      @keyframes back {
+        from {
+          background-color: #f6f9fb;
+        }
+        to {
+          background-color: #666;
+        }
+      }
+      *,
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
       body {
         font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
           'Hiragino Sans', Meiryo, sans-serif;
         background-color: #f6f9fb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-      h1 {
-        margin: 0;
+      .container {
+        width: 80vw;
         height: 100vh;
-        line-height: 100vh;
-        text-align: center;
+        padding: 0 10vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
         font-size: 10vw;
         font-weight: lighter;
-        letter-spacing: 3vw;
         pointer-events: none;
         user-select: none;
+        animation-name: back;
+        animation-duration: 4000ms;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
       @supports (-webkit-touch-callout: none) {
-        h1 {
+        .container {
           height: -webkit-fill-available;
         }
       }
-      .t {
+      .t1,
+      .t2,
+      .t3,
+      .t4,
+      .t5,
+      .t6,
+      .t7,
+      .t8,
+      .t9,
+      .t10 {
         animation-name: title;
         animation-duration: 2000ms;
         animation-timing-function: ease-out;
@@ -146,12 +178,12 @@
     </noscript>
   </head>
   <body>
-    <h1>
-      <span class="t t1">T</span><span class="t t2">r</span
-      ><span class="t t3">e</span><span class="t t4">n</span
-      ><span class="t t5">d</span><span class="t t6">i</span
-      ><span class="t t7">p</span><span class="t t8">i</span
-      ><span class="t t9">t</span><span class="t t10">y</span>
-    </h1>
+    <div class="container">
+      <span class="t1">T</span><span class="t2">r</span><span class="t3">e</span
+      ><span class="t4">n</span><span class="t5">d</span
+      ><span class="t6">i</span><span class="t7">p</span
+      ><span class="t8">i</span><span class="t9">t</span
+      ><span class="t10">y</span>
+    </div>
   </body>
 </html>
