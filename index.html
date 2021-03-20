@@ -80,6 +80,11 @@
         pointer-events: none;
         user-select: none;
       }
+      @supports (-webkit-touch-callout: none) {
+        h1 {
+          height: -webkit-fill-available;
+        }
+      }
       .t {
         animation-name: title;
         animation-duration: 2000ms;
